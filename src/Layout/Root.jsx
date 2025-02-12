@@ -9,7 +9,10 @@ const Root = () => {
         <div className="max-w-[1460px]  mx-auto ">
           <Header></Header>
           <Outlet></Outlet>
-          <Footer></Footer>
+          
+        </div>
+        <div>
+         <Footer></Footer>
         </div>
       </div>
     );
