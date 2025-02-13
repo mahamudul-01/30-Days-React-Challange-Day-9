@@ -26,43 +26,83 @@ const Header = () => {
             className="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow text-base"
           >
             <li>
-              <NavLink to='/statistics'>Statistics</NavLink>
+              <NavLink 
+                to='/statistics' 
+                className={({ isActive }) => 
+                  isActive ? "text-green-500" : "hover:text-green-500"
+                }
+              >
+                Statistics
+              </NavLink>
             </li>
             <li>
-            <NavLink to='/applied-job'>Applied Jobs</NavLink>
-              
+              <NavLink 
+                to='/applied-job' 
+                className={({ isActive }) => 
+                  isActive ? "text-green-500" : "hover:text-green-500"
+                }
+              >
+                Applied Jobs
+              </NavLink>
             </li>
             <li>
-            <NavLink to='/blog'>Blog</NavLink>
+              <NavLink 
+                to='/blog' 
+                className={({ isActive }) => 
+                  isActive ? "text-green-500" : "hover:text-green-500"
+                }
+              >
+                Blog
+              </NavLink>
             </li>
           </ul>
         </div>
-       <div>
-         <NavLink to='/'>
-         <h1 className="text-4xl text-[#1A1919] font-bold">Work Wave</h1>
-            </NavLink>
-       </div>
+        <div>
+          <NavLink to='/'>
+            <h1 className="text-4xl text-[#1A1919] font-bold">Work Wave</h1>
+          </NavLink>
+        </div>
       </div>
       <div className="navbar-center hidden lg:flex">
         <ul className="menu menu-horizontal px-1">
-        <li>
-        <NavLink className='' to='/statistics'>Statistics</NavLink>
-            </li>
-            <li>
-            <NavLink to='/applied-job'>Applied Jobs</NavLink>
-              
-            </li>
-            <li>
-            <NavLink to='/blog'>Blog</NavLink>
-            </li>
+          <li>
+            <NavLink 
+              to='/statistics' 
+              className={({ isActive }) => 
+                isActive ? "text-green-500" : "hover:text-green-500"
+              }
+            >
+              Statistics
+            </NavLink>
+          </li>
+          <li>
+            <NavLink 
+              to='/applied-job' 
+              className={({ isActive }) => 
+                isActive ? "text-green-500" : "hover:text-green-500"
+              }
+            >
+              Applied Jobs
+            </NavLink>
+          </li>
+          <li>
+            <NavLink 
+              to='/blog' 
+              className={({ isActive }) => 
+                isActive ? "text-green-500" : "hover:text-green-500"
+              }
+            >
+              Blog
+            </NavLink>
+          </li>
         </ul>
       </div>
       <div className="navbar-end">
-      <button
-      className="bg-gradient-to-r from-green-500 to-[#399918] text-white font-semibold py-2 px-4 rounded-md shadow-md transition-all duration-300"
-    >
-      Start Applying
-    </button>
+        <button
+          className="bg-gradient-to-r from-green-500 to-[#399918] text-white font-semibold py-2 px-4 rounded-md shadow-md transition-all duration-300"
+        >
+          Start Applying
+        </button>
       </div>
     </div>
   );
