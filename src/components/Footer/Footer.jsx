@@ -2,8 +2,8 @@ import footerImg from "../../assets/icons/social.png";
 
 const Footer = () => {
   return (
-    <div>
-      <footer className=" bg-[#1A1919] text-gray-400 p-10">
+    <div className=" bg-[#1A1919] text-gray-400 p-10 ">
+      <footer className=" max-w-[1460px]  mx-auto">
         <div className="grid grid-cols-1 md:grid-cols-5 gap-10 justify-between ">
           <aside className="">
             <h2 className="text-4xl text-white">Work Wave</h2>
@@ -40,7 +40,7 @@ const Footer = () => {
             <h6 className="text-xl text-white">Contact</h6>
 
             <h2>+8801717314816</h2>
-            <h2 className="underline">mahamudulofficial.info@gmail.com</h2>
+            <h2 className="underline">mahamudulofficial.info <br /> @gmail.com</h2>
           </nav>
         </div>
         <div className="divider mt-6 mb-6 "></div>

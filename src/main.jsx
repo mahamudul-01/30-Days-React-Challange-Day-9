@@ -21,7 +21,7 @@ const router = createBrowserRouter([
         element: <Home></Home>,
       },
       {
-        path: "statis/tics",
+        path: "/statistics",
         element: <Statistics></Statistics>,
       },
       {
