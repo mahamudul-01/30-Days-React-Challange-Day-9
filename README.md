@@ -1,8 +1,35 @@
-# React + Vite
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+# Work Wave
 
-Currently, two official plugins are available:
+Work Wave is a project developed as part of the "30 Days React Challenge". This project focuses on creating a productivity application using React.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Features
+
+- Task management
+- Time tracking
+- Notifications
+- User authentication
+
+## Installation
+
+To install the project dependencies, run:
+
+```bash
+npm install
+```
+
+## Usage
+
+To start the development server, run:
+
+```bash
+npm start
+```
+
+## Contributing
+
+If you would like to contribute to this project, please fork the repository and submit a pull request.
+
+## License
+
+This project is licensed under the MIT License.
