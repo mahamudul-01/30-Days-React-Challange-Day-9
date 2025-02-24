@@ -14,7 +14,7 @@ const FeaturedJobs = () => {
 
     return (
         <div className="max-w-[1460px] mx-auto px-6">
-            <h2 className="text-5xl text-center font-semibold mb-6">Featured Jobs</h2>
+            <h2 className="text-5xl mt-10 text-center font-semibold mb-6">Featured Jobs</h2>
             <p className="text-center mb-6">Explore the latest job opportunities from top companies.</p>
 
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 justify-between">
