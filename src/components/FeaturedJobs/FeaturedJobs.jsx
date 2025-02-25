@@ -27,7 +27,7 @@ const FeaturedJobs = () => {
         ))}
       </div>
       <div className={dataLength >= 6? 'hidden': 'flex justify-center mt-6'}>
-        <button onClick={() => setDataLength(jobs.length)} className="bg-gradient-to-r from-[#399918] to-green-600 text-white font-semibold py-2 px-4 rounded-md shadow-md transition-all duration-300">
+        <button onClick={() => setDataLength(jobs.length)} className="bg-gradient-to-r from-[#399918] to-green-600 text-white font-semibold my-6 py-2 px-4 rounded-md shadow-md transition-all duration-300">
           See All Jobs
         </button>
       </div>

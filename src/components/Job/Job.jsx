@@ -1,22 +1,19 @@
 import { CiDollar, CiLocationOn } from "react-icons/ci";
 import { Link } from "react-router-dom";
-
+import PropTypes from "prop-types";
 const Job = ({ job }) => {
   const {
     id,
     logo,
     job_title,
     company_name,
-    location,
-    job_type,
+
     salary,
-    job_description,
-    educational_requirements,
-    experiences,
+
     contact_information,
   } = job;
 
-  const { email, phone, address } = contact_information;
+  const { address } = contact_information;
   return (
     <div className="p-4 space-y-4 shadow-md">
       <img className="" src={logo} alt="" />
@@ -35,17 +32,13 @@ const Job = ({ job }) => {
           <p className="">
             <CiLocationOn />
           </p>
-          <p className="text-sm text-gray-600">
-            {location} 
-          </p>
+          <p className="text-sm text-gray-600">{address}</p>
         </div>
         <div className="flex items-center space-x-2">
           <p className="">
-          <CiDollar/>
+            <CiDollar />
           </p>
-          <p className="text-sm text-gray-600">
-           Salary: {salary}
-          </p>
+          <p className="text-sm text-gray-600">Salary: {salary}</p>
         </div>
       </div>
       <button
@@ -53,12 +46,14 @@ const Job = ({ job }) => {
         href="#"
         className="px-8 py-3 text-sm font-semibold rounded dark:bg-[#399918] dark:text-gray-50"
       >
-        <Link to={`/job/${id}`}>
-        View Details
-        </Link>
+        <Link to={`/job/${id}`}>View Details</Link>
       </button>
     </div>
   );
+};
+
+Job.propTypes = {
+  job: PropTypes.object,
 };
 
 export default Job;

@@ -11,11 +11,9 @@ const JobDetails = () => {
   const job = jobs.find((job) => job.id === idInt);
 
   const {
-    logo,
+    
     job_title,
-    company_name,
-    location,
-    job_type,
+    
     salary,
     job_description,
     educational_requirements,
@@ -114,7 +112,7 @@ const JobDetails = () => {
                   href="#"
                   className="px-6 py-2 w-full text-center my-6 text-sm font-semibold rounded dark:bg-[#399918] dark:text-gray-50"
                 >
-                  Get Started
+                  Apply Now
                 </a>
               </div>
             </div>
