@@ -1,4 +1,5 @@
 import { CiDollar, CiLocationOn } from "react-icons/ci";
+import { Link } from "react-router-dom";
 
 const Job = ({ job }) => {
   const {
@@ -52,7 +53,9 @@ const Job = ({ job }) => {
         href="#"
         className="px-8 py-3 text-sm font-semibold rounded dark:bg-[#399918] dark:text-gray-50"
       >
+        <Link to={`/job/${id}`}>
         View Details
+        </Link>
       </button>
     </div>
   );
