@@ -4,7 +4,10 @@ import { CiDollar, CiLocationOn } from "react-icons/ci";
 import { RxCalendar } from "react-icons/rx";
 import { MdOutlineEmail, MdOutlineLocalPhone } from "react-icons/md";
 import { ToastContainer, toast } from "react-toastify";
-import { saveJobApplication } from "../../../utility/localStorage";
+import {
+  getStoredJobApplications,
+  saveJobApplication,
+} from "../../../utility/localStorage";
 
 const JobDetails = () => {
   const jobs = useLoaderData();
@@ -16,6 +19,7 @@ const JobDetails = () => {
     job_title,
 
     salary,
+    job_responsibility,
     job_description,
     educational_requirements,
     experiences,
@@ -24,8 +28,13 @@ const JobDetails = () => {
   const { phone, email, address } = contact_information;
 
   const handleApplyJob = () => {
-    saveJobApplication(idInt)
-    toast.success("You have successfully applied for this job");
+    const storedJobIds = getStoredJobApplications();
+    if (storedJobIds.includes(idInt)) {
+      toast.error("You have already applied for this job");
+    } else {
+      saveJobApplication(idInt);
+      toast.success("You have successfully applied for this job");
+    }
   };
 
   return (
@@ -40,11 +49,8 @@ const JobDetails = () => {
           </p>
 
           <p className="text-base mb-6">
-            <span className="font-bold text-black">Job Responsibility: </span>{" "}
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut modi
-            voluptas ea autem omnis facere, esse, aspernatur culpa officiis
-            aliquam, sequi iste saepe cumque. Sed ut reprehenderit iure debitis!
-            Id.{" "}
+            <span className="font-bold text-black">Job Responsibility: </span>
+            {job_responsibility}
           </p>
 
           <p className="text-base mb-6">
@@ -122,7 +128,7 @@ const JobDetails = () => {
                   Apply Now
                 </button>
               </div>
-              <ToastContainer position="top-center" />
+              <ToastContainer autoClose={2000} position="top-center" />
             </div>
           </div>
         </div>

@@ -25,16 +25,7 @@ const Header = () => {
             tabIndex={0}
             className="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow text-base"
           >
-            <li>
-              <NavLink 
-                to='/statistics' 
-                className={({ isActive }) => 
-                  isActive ? "text-green-500" : "hover:text-green-500"
-                }
-              >
-                Statistics
-              </NavLink>
-            </li>
+            
             <li>
               <NavLink 
                 to='/applied-job' 
@@ -43,6 +34,16 @@ const Header = () => {
                 }
               >
                 Applied Jobs
+              </NavLink>
+            </li>
+            <li>
+              <NavLink 
+                to='/statistics' 
+                className={({ isActive }) => 
+                  isActive ? "text-green-500" : "hover:text-green-500"
+                }
+              >
+                Statistics
               </NavLink>
             </li>
             <li>
@@ -65,16 +66,18 @@ const Header = () => {
       </div>
       <div className="navbar-center hidden lg:flex">
         <ul className="menu menu-horizontal px-1">
-          <li>
+         
+          
+        <li>
             <NavLink 
-              to='/statistics' 
+              to='/' 
               className={({ isActive }) => 
                 isActive ? "text-green-500" : "hover:text-green-500"
               }
             >
-              Statistics
+              Home
             </NavLink>
-          </li>
+          </li>     
           <li>
             <NavLink 
               to='/applied-job' 
@@ -83,6 +86,16 @@ const Header = () => {
               }
             >
               Applied Jobs
+            </NavLink>
+          </li>
+          <li>
+            <NavLink 
+              to='/statistics' 
+              className={({ isActive }) => 
+                isActive ? "text-green-500" : "hover:text-green-500"
+              }
+            >
+              Statistics
             </NavLink>
           </li>
           <li>
