@@ -10,6 +10,7 @@ const AppliedJobCard = ({ job }) => {
     job_type,
 
     salary,
+    remote_or_onsite,
     
     contact_information,
   } = job;
@@ -24,9 +25,12 @@ const AppliedJobCard = ({ job }) => {
           <div className="card-body">
             <h2 className="card-title">{job_title}</h2>
             <p>{company_name}</p>
-            <div className="flex justify-items-start items-center space-x-4 w-[30%]"> 
+            <div className="flex justify-items-start items-center space-x-4 w-[60%]"> 
               <p className="border border-[#399918] text-center p-2 text-sm font-semibold rounded-md text-[#399918] " >
                 {job_type}
+              </p>
+              <p className="border border-[#399918] text-center p-2 text-sm font-semibold rounded-md text-[#399918] " >
+                {remote_or_onsite}
               </p>
             </div>
             <div className="flex justify-start items-center space-x-2">

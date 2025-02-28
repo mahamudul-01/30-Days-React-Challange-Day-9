@@ -7,8 +7,10 @@ const Job = ({ job }) => {
     logo,
     job_title,
     company_name,
+    job_type,
 
     salary,
+    remote_or_onsite,
 
     contact_information,
   } = job;
@@ -21,10 +23,10 @@ const Job = ({ job }) => {
       <p className="text-gray-600 text-base">{company_name}</p>
       <div className="flex justify-items-start items-center space-x-4">
         <p className="border border-[#399918] p-4 text-sm font-semibold rounded-md text-[#399918]">
-          Remote
+          {job_type}
         </p>
         <p className="border border-[#399918] p-4 text-sm font-semibold rounded-md text-[#399918]">
-          Remote
+          {remote_or_onsite}
         </p>
       </div>
       <div className="flex justify-start items-center space-x-2">

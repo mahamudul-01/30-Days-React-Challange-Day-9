@@ -12,9 +12,10 @@ const Banner = () => {
               <span className="dark:text-[#399918]">Dream Job</span>
             </h1>
             <p className="mt-6 mb-8 text-lg sm:mb-12">
-              Dictum aliquam porta in condimentum ac integer
+           Your dream job is closer than you think. Imagine a career that excites you, fulfills your passions, and aligns with your goals. With just one click, you can take the first step toward making it a reality.
               <br className="hidden md:inline lg:hidden" />
-              turpis pulvinar, est scelerisque ligula sem
+              Whether it’s the role you’ve always wanted, the company you admire, or the chance to grow and thrive,
+              
             </p>
             <div className="flex flex-col space-y-4 sm:items-center sm:justify-center sm:flex-row sm:space-y-0 sm:space-x-4 lg:justify-start">
               <a

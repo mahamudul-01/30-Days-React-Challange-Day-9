@@ -1,8 +1,9 @@
+import FunnyLoadingMessages from "../../components/FunnyLoadingMessages/FunnyLoadingMessages";
 
 const Blog = () => {
     return (
         <div>
-            Blog
+            <FunnyLoadingMessages></FunnyLoadingMessages>
         </div>
     );
 };
