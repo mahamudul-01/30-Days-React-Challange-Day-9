@@ -3,6 +3,8 @@ import "./JobDetails.css";
 import { CiDollar, CiLocationOn } from "react-icons/ci";
 import { RxCalendar } from "react-icons/rx";
 import { MdOutlineEmail, MdOutlineLocalPhone } from "react-icons/md";
+import { ToastContainer, toast } from "react-toastify";
+import { saveJobApplication } from "../../../utility/localStorage";
 
 const JobDetails = () => {
   const jobs = useLoaderData();
@@ -11,9 +13,8 @@ const JobDetails = () => {
   const job = jobs.find((job) => job.id === idInt);
 
   const {
-    
     job_title,
-    
+
     salary,
     job_description,
     educational_requirements,
@@ -21,6 +22,11 @@ const JobDetails = () => {
     contact_information,
   } = job;
   const { phone, email, address } = contact_information;
+
+  const handleApplyJob = () => {
+    saveJobApplication(idInt)
+    toast.success("You have successfully applied for this job");
+  };
 
   return (
     <div className="max-w-[1460px] mx-auto px-6">
@@ -107,14 +113,16 @@ const JobDetails = () => {
             </div>
             <div>
               <div className="flex flex-col space-y-4 sm:items-center sm:justify-center sm:flex-row sm:space-y-0 sm:space-x-4 lg:justify-start">
-                <a
+                <button
+                  onClick={handleApplyJob}
                   rel="noopener noreferrer"
                   href="#"
                   className="px-6 py-2 w-full text-center my-6 text-sm font-semibold rounded dark:bg-[#399918] dark:text-gray-50"
                 >
                   Apply Now
-                </a>
+                </button>
               </div>
+              <ToastContainer position="top-center" />
             </div>
           </div>
         </div>
